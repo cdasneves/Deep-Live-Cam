@@ -13,6 +13,6 @@ def imwrite_unicode(path, img, params=None):
         ext = ".png"
     result, encoded_img = cv2.imencode(ext, img, params if params else [])
     result, encoded_img = cv2.imencode(f".{ext}", img, params if params is not None else [])
-        encoded_img.tofile(path)
+    encoded_img.tofile(path)
         return True
     return False
